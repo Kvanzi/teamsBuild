@@ -1,0 +1,43 @@
+@use "sass:math";
+
+// ===================== Sass функции =====================
+@function rem($px) {
+  // конвертация пикселей в rem
+  @return math.div($px, 16) + rem;
+}
+
+// ===================== Подключение шрифта =====================
+// &display=swap - добавить при подключении через плагин
+@import url("https://fonts.googleapis.com/css?family=Inter:regular,500,600,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Manrope:500,600,700,800&display=swap");
+
+// ===================== Обнуление =====================
+
+$minWidth: 320; // Минимальная ширина сайта
+$mainColor: #fff; // Цвет по умолчанию
+$fontFamily: "Manrope"; // Семейство шрифта по умолчанию
+$fontSize: rem(16); // Размер шрифта по умолчанию
+
+@import "_reset.scss";
+
+// ===================== Цвета =====================
+
+$blue: #3563e9;
+
+// ===================== Общие стили =====================
+
+@import "_common.scss";
+
+// ===================== Настройка ограничивающего контейнера =====================
+
+$maxWidthContainer: 1200; // Максимальная ширина контейнера
+$containerPadding: 20; // Отсупы безопасности (если 15, то 15 справа и слева)
+
+[class*="__container"] {
+  max-width: rem($maxWidthContainer + $containerPadding * 2);
+  margin: 0 auto;
+  padding: 0px rem($containerPadding);
+}
+.lock body {
+  overflow: hidden;
+}
