@@ -608,11 +608,18 @@ h6 {
 .clients__subtitle:not(:last-child) {
   margin-bottom: clamp(1.25rem, 0.598rem + 3.26vw, 3.125rem);
 }
+.clients__pagination {
+  bottom: clamp(-1.25rem, -1.364rem + 0.57vw, -0.938rem) !important;
+}
 .clients__slide {
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+}
+
+.swiper-slider__wrapper {
+  position: relative;
 }
 
 .slide__wrapper {

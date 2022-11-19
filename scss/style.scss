@@ -602,12 +602,25 @@
   &__wrapper {
   }
 
+  &__pagination {
+    bottom: clamp(-1.25rem, -1.364rem + 0.57vw, -0.938rem) !important;
+  }
+
   // .clients__slide
 
   &__slide {
     user-select: none;
   }
 }
+
+.swiper-slider {
+  // .swiper-slider__wrapper
+
+  &__wrapper {
+    position: relative;
+  }
+}
+
 .slide {
   &__wrapper {
     max-width: rem(445);
