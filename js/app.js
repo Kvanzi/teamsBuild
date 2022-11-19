@@ -1,7 +1,18 @@
-document.querySelector('.header__menu').addEventListener('click', () => {
+function toggleMenu() {
     document.documentElement.classList.toggle('menu-open');
     document.documentElement.classList.toggle('lock');
+}
+document.querySelector('.header__menu').addEventListener('click', () => {
+    toggleMenu();
 });
+const menuItems = document.querySelectorAll('.header__item');
+for (const i of menuItems) {
+    i.addEventListener('click', () => {
+        if (document.documentElement.classList.contains('menu-open')) {
+            toggleMenu();
+        }
+    });
+}
 
 const clientsSlider = new Swiper('.clients__slider', {
     speed: 600,
