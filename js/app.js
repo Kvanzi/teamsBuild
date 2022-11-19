@@ -23,6 +23,7 @@ const clientsSlider = new Swiper('.clients__slider', {
     },
     pagination: {
         el: '.swiper-pagination',
+        clickable: true,
     },
 
     breakpoints: {
