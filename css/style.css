@@ -626,6 +626,11 @@ h6 {
     margin: 0 0 0 auto;
   }
 }
+@media (max-width: 1023.98px) {
+  .slide__wrapper {
+    margin: 0 auto;
+  }
+}
 .slide__stars {
   display: flex;
   gap: 0.5rem;
