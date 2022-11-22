@@ -14,34 +14,36 @@ for (const i of menuItems) {
     });
 }
 
-const clientsSlider = new Swiper('.clients__slider', {
-    speed: 600,
-    watchOverflow: false,
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
+if (document.querySelector('.clients__slider')) {
+    const clientsSlider = new Swiper('.clients__slider', {
+        speed: 600,
+        watchOverflow: false,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
 
-    breakpoints: {
-        320: {
-            navigation: {
-                enabled: false,
+        breakpoints: {
+            320: {
+                navigation: {
+                    enabled: false,
+                },
+            },
+            768: {
+                navigation: {
+                    enabled: true,
+                },
+                slidesPerGroup: 1,
+                slidesPerView: 1,
+            },
+            1024: {
+                slidesPerGroup: 2,
+                slidesPerView: 2,
             },
         },
-        768: {
-            navigation: {
-                enabled: true,
-            },
-            slidesPerGroup: 1,
-            slidesPerView: 1,
-        },
-        1024: {
-            slidesPerGroup: 2,
-            slidesPerView: 2,
-        },
-    },
-});
+    });
+}
